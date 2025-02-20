@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จองที่นั่งเมล์</title>
+    <!-- ลิ้ง CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <!-- รวม Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ส่วนของ Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="index.html">แบรนด์</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ผู้จัดทำ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./admin/login.php">สำหรับแอดมิน</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="booking-form">
+        <div class="container-fluid text-center"><h2>จองที่นั่ง</h2></div>
+        <form id="bookingForm" method="POST">
+            <label for="route">รถเมล์สาขาพิชัย:</label>
+            <select id="route" name="route" required>
+                <option value="">เลือกเส้นทาง</option>
+                <option value="รอบแรก">พิชัย - อุตรดิตถ์</option>
+                <option value="รอบสอง">อุตรดิตถ์ - พิชัย</option>
+            </select><br>
+            <label for="user_n">ชื่อ:</label>
+            <input type="text" id="user_n" name="user_n" required><br>
+            <label for="time">เวลา:</label>
+            <select id="time" name="time" required>
+                <option value="">เลือกเวลา</option>
+                <optgroup label="พิชัย - อุตรดิตถ์">
+                    <option value="06:00-07:00">06:00 - 07:00</option>
+                    <option value="09:00-10:00">09:00 - 10:00</option>
+                    <option value="16:00-17:00">16:00 - 17:00</option>
+                </optgroup>
+                <optgroup label="อุตรดิตถ์ - พิชัย">
+                    <option value="07:30-08:30">07:30 - 08:30</option>
+                    <option value="11:00-12:00">11:00 - 12:00</option>
+                    <option value="18:00-19:00">18:00 - 19:00</option>
+                </optgroup>
+            </select><br>
+
+            <label for="date">วันที่:</label>
+            <input type="date" id="date" name="date" required><br>
+
+            <label for="seats">จำนวนที่นั่ง:</label>
+            <input type="number" id="seats" name="seats" min="1" max="15" required><br>
+            
+            <br>
+            <button type="submit">จองที่นั่ง</button>
+        </form>
+        <div id="confirmationMessage"></div> <!-- Here the success or error message will be displayed -->
+    </section>
+
+    <script>
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            var username = document.getElementById('user_n').value;
+            var route = document.getElementById('route').value;
+            var time = document.getElementById('time').value;
+            var date = document.getElementById('date').value;
+            var seats = document.getElementById('seats').value;
+
+            // Debugging: Check if values are captured
+            console.log("User: " + username);
+            console.log("Route: " + route);
+            console.log("Time: " + time);
+            console.log("Date: " + date);
+            console.log("Seats: " + seats);
+
+            // Generate confirmation message
+            var confirmationMessage = `
+                <p>ขอบคุณ ${username} สำหรับการจองที่นั่ง</p>
+                <p>เส้นทาง: ${route}</p>
+                <p>เวลา: ${time}</p>
+                <p>วันที่: ${date}</p>
+                <p>จำนวนที่นั่ง: ${seats}</p>
+            `;
+            
+            // Display confirmation message
+            document.getElementById('confirmationMessage').innerHTML = confirmationMessage;
+        });
+    </script>
+</body>
+</html>

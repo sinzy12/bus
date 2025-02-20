@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+    }
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.booking-form {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #003f7f;
+    transform: scale(0.95);
+}
+
+#confirmationMessage {
+    margin-top: 20px;
+    color: green;
+}
+
+/* ปรับแต่งพื้นหลังของ Navbar */
+.navbar {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    /* ไล่สีจากม่วงไปน้ำเงิน */
+    color: white;
+    /* สีข้อความ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* เพิ่มเงาด้านล่าง */
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    /* ตัวอักษรพิมพ์ใหญ่ */
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffd700;
+    /* สีโลโก้เมื่อ hover */
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    /* สีลิงก์ */
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd700;
+    /* สีเมื่อ hover */
+}
+
+.navbar-toggler {
+    border-color: #fff;
+    /* สีของปุ่ม hamburger */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="white" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* กำหนดระยะห่างเมื่ออยู่ในมือถือ */
+@media (max-width: 768px) {
+    .navbar-nav {
+        background-color: rgba(0, 0, 0, 0.7);
+        /* สีพื้นหลังของเมนูในมือถือ */
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+    }
+}
+
+.about {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h1 {
+    color: #333;
+}
+
+.about img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.about .contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about .contact-info p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-image-1 {
+    background-image: url('img/449379738_879855927509391_3331420940628556084_n.jpg');
+    background-size: contain;
+    /* ให้ภาพแสดงทั้งหมดโดยไม่ถูกตัด */
+    background-position: center;
+    /* จัดตำแหน่งภาพให้อยู่กลาง */
+    width: 70%;
+    /* กำหนดให้กว้าง 70% */
+    height: 500px;
+    /* กำหนดความสูง */
+}
+
+
+.carousel-image-2 {
+    background-image: url('img/449391894_879856077509376_1668287547938636742_n.jpg');
+    background-size: contain;
+    /* ให้ภาพแสดงทั้งหมดโดยไม่ถูกตัด */
+    background-position: center;
+    /* จัดตำแหน่งภาพให้อยู่กลาง */
+    width: 70%;
+    /* กำหนดให้กว้าง 70% */
+    height: 500px;
+    /* กำหนดความสูง */
+}
+
+
+.carousel-image-3 {
+    background-image: url('img/449528360_879856177509366_2602586393609280597_n.jpg');
+    background-size: contain;
+    /* ให้ภาพแสดงทั้งหมดโดยไม่ถูกตัด */
+    background-position: center;
+    /* จัดตำแหน่งภาพให้อยู่กลาง */
+    width: 70%;
+    /* กำหนดให้กว้าง 70% */
+    height: 500px;
+    /* กำหนดความสูง */
+}
+
+/* กำหนดรูปแบบปุ่ม */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #ffffff;
+    border: 1px solid #28a745;
+}
+
+/* เอฟเฟกต์เมื่อโฮเวอร์ */
+.btn-success:hover {
+    background-color: #218838;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success:active {
+    background-color: #1e7e34;
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-lg {
+    font-size: 20px;
+    padding: 12px 25px;
+}
+
+.big {
+    display: flex;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 70px 20px;
+}

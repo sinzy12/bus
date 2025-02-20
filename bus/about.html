@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา - จองที่นั่งเมล์</title>
+    <!-- ลิ้ง CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- รวม Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ส่วนของ Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="index.html">แบรนด์</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="howw.html">วิธีการจองและการชำระเงิน</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ติดต่อเรา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./admin/login.php">สำหรับแอดมิน</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ส่วนของ Hero Section -->
+    <div class="container-fluid bg-primary text-white text-center py-5">
+        <h1 class="text-center mb-4" id="changing-text">ผู้จัดทำ</h1>
+    </div>
+
+    <!-- ส่วนของ Introduction -->
+    <div class="container py-5">
+
+        <div class=" row">
+            <div class="col-md-6 text-center">
+                <img src="./img/บิ๊ก.jpg" class="img-fluid rounded-circle" alt="Team Member" width="200" height="200">
+                <h4>นาย พิสิษฐ์ มหาอำมาตย์</h4>
+                <p><strong>เบอร์ติดต่อ:</strong> 083-887-2285</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="./img/วิว.jpg" class="img-fluid rounded-circle" alt="Team Member" width="200" height="200">
+                <h4>นางสาว จุฑามาศ อินรุ่ง</h4>
+                <p><strong>เบอร์ติดต่อ:</strong> 098-765-4321</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ส่วนของ Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>© 2024 เว็บไซต์ของเรา - สงวนลิขสิทธิ์</p>
+    </footer>
+
+    <!-- รวม JavaScript ของ Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        // ฟังก์ชันเพื่อเปลี่ยนสีข้อความ
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // เปลี่ยนสีทุกๆ 1 วินาที
+        setInterval(function () {
+            document.getElementById("changing-text").style.color = getRandomColor();
+        }, 1000); // เปลี่ยนทุกๆ 1000 ms (1 วินาที)
+    </script>
+</body>
+
+</html>
